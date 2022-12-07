@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+:root{
+    --primary-lightCyan: hsl(193, 38%, 86%);
+    --primary-neonGreen:hsl(150, 100%, 66%);
+    --hover:hsla(150, 100%, 66%, 0.473);
+    --neutral-grayishBlue:hsl(217, 19%, 38%);
+    --neutral-darkGrayish-Blue: hsl(217, 19%, 24%);
+    --neutral-darkBlue:hsl(218, 23%, 16%);
+}
+*,
+*::before,
+*::after{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+   background-color: var(--neutral-darkBlue);
+   max-width: 100vw;
+   height:100vh;
+   display:flex;
+   align-items: center;
+   justify-content: center;
+   font-family: 'Manrope',sans-serif;
+}
+main{
+    position: relative;
+    display:flex;
+    justify-content: center;
+}
+.advice-container{
+    background-color: var(--neutral-darkGrayish-Blue);
+    border-radius: 20px;
+    max-width: 320px;
+    max-height:320px;
+    padding:1em 2em;
+    margin:1em;
+    position: relative;
+    top:-80px;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.advice-container::before{
+    content:'';
+    position: absolute;
+    width:4em;
+    height: 4em;
+    border-radius: 50%;
+    bottom:-35px;
+    background-color: var(--primary-neonGreen);
+    transition: .4s ease-in-out;
+}
+#advice{
+    text-align: center;
+}
+
+
+h3{
+    color:var(--primary-neonGreen);
+    font-size:11px;
+    margin-bottom:2em;
+    letter-spacing: 3px;
+}
+p{
+    color:var(--primary-lightCyan);
+    font-size:22px;
+}
+.fa{
+    font-size:10px !important;
+    margin:3px;
+    position: relative;
+    top:-7px;
+}
+.pattern-img{
+    display:block;
+    margin-block:2em 3em;
+}
+
+.generate-advice{
+    cursor: pointer;
+    position: absolute;
+    width:40px;
+    bottom:4.7em;
+    background: var(--primary-neonGreen);
+    transition:  .5s ease-in-out;
+}
+.generate-advice:hover{
+    box-shadow: 0 0 15px 15px var(--primary-neonGreen);
+    transform: scale(1.1) rotate(180deg);
+}
+.watermark{
+    position:absolute;
+    font-size:50px  !important;
+    color:var(--primary-neonGreen);
+    top:-26px;
+    left:20px;
+}
+
+@media (min-width:500px) {
+    .advice-container{
+        max-width:500px;
+    }
+    .generate-advice{
+        width:2em;
+        bottom:4.8em;
+    }
+}
+
+
